@@ -1,0 +1,57 @@
+
+
+<div style='width: 800px;'>
+  <div id="multi_markers" style='width: 800px; height: 400px;'></div>
+</div>
+
+
+
+<script type="text/javascript">
+
+var handler = Gmaps.build('Google');
+handler.buildMap({ internal: {id: 'multi_markers'}}, function(){
+  var markers = handler.addMarkers([
+    { lat: -33, lng: -70},
+    { lat: -33.5, lng: -70.5},
+    { lat: -34, lng: -71},
+    { lat: -30, lng: -70},
+    { lat: -31, lng: -70},
+    { lat: -32, lng: -70},
+    { lat: -40, lng: -70},
+    { lat: -40.5, lng: -70},
+    { lat: -41, lng: -70},
+    { lat: -41.5, lng: -70},
+    { lat: -42, lng: -70},
+    { lat: -42.5, lng: -70},
+    { lat: -43, lng: -70}
+    { lat: -36.801, lng: -73.091}
+    { lat: -36.881, lng: -73.091}
+    { lat: -36.804, lng: -73.091}
+    { lat: -36.701, lng: -73.022}
+    { lat: -36.601, lng: -73.022}
+    { lat: -36.801, lng: -73.091}
+    { lat: -36.851, lng: -74.091}
+    { lat: -36.809, lng: -74.091}
+    { lat: -36.821, lng: -74.091}
+    { lat: -36.401, lng: -74.091}
+    { lat: -36.301, lng: -74.044}
+    { lat: -36.021, lng: -74.091}
+    { lat: -36.101, lng: -74.091}
+    { lat: -37.995, lng: -72.434}
+    { lat: -37.895, lng: -72.444}
+    { lat: -37.795, lng: -72.434}
+    { lat: -37.952, lng: -72.434}
+    { lat: -37.495, lng: -72.434}
+    { lat: -37.095, lng: -72.434}
+    { lat: -37.295, lng: -72.434}
+    { lat: -37.395, lng: -72.434}
+    { lat: -37.995, lng: -72.438}
+    { lat: -37.295, lng: -72.458}
+    { lat: -37.695, lng: -72.452}
+
+  ]);
+  handler.bounds.extendWith(markers);
+  handler.fitMapToBounds();
+});
+
+</script>

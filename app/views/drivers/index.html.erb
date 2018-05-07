@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <div class="row align-items-center justify-content-center">
+    <div class="col-6">
+      <h1 class="text-center">Drivers</h1>
+    </div>
+  </div>
+</div>
+
+<%= render 'dashboards/index' %>
+
+
+
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-12">
+
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Address</th>
+                <th>Description</th>
+                <th>Title</th>
+                <th colspan="3"></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @drivers.each do |driver| %>
+              <tr>
+                <td><%= driver.latitude %></td>
+                <td><%= driver.longitude %></td>
+                <td><%= driver.address %></td>
+                <td><%= driver.description %></td>
+                <td><%= driver.title %></td>
+                <td><%= link_to 'Show', driver, class:"btn btn-primary"%></td>
+                <td><%= link_to 'Edit', edit_driver_path(driver), class:"btn btn-outline-warning" %></td>
+                <td><%= link_to 'Destroy', driver, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-secondary btn-lg" %></td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+
+          <br>
+
+          <%= link_to 'New Driver', new_driver_path %>
+
+
+        </div>
+      </div>
+
+    </div>
